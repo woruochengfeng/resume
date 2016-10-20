@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>{% block title %}{% endblock %} - 简历 </title>
+
+	{% include 'link_css.html' %}
+    {% block css %}{% endblock %}
+</head>
+<body>
+
+	<div class="wrapper">
+
+		<!-- Preloader -->
+
+		<div id="preloader">
+			<div id="status">
+				<div class="status-mes"><h4>Mark Stone</h4></div>
+			</div>
+		</div>
+
+		<!-- Navigation start -->
+
+		<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+			<div class="container">
+
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">张 旭楠</a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#intro">首页</a></li>
+						<li><a href="#profile">简介</a></li>
+						<li><a href="#services">技能</a></li>
+						<li><a href="#resume">履历</a></li>
+						<li><a href="#portfolio">作品</a></li>
+						<li><a href="#contact">联系我</a></li>
+					</ul>
+				</div>
+
+			</div>
+		</nav>
+
+		<!-- Navigation end -->
+        {% block content %}
+        {% endblock %}
+
+        {% include 'footer.html' %}
+
+	</div><!-- .wrapper -->
+
+	{% include 'foot_script.html' %}
+    {% block js %}{% endblock %}
+
+</body>
+</html>
